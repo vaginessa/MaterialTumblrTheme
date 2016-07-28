@@ -1,0 +1,479 @@
+﻿<!DOCTYPE HTML>
+<!-- 
+    Copyright 2016 Jean-Pierre Hotz
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+	<head>
+		<title>{0}</title>
+		<meta charset="UTF-8"/>
+        
+        <link rel="shortcut icon" href="{1}">
+    	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+        {2}{3}
+
+        <style type="text/css">
+.white-text a{{
+    color:white;
+}}
+.white-text a:hover{{
+    text-decoration: underline;
+}}
+.banner-in-background{{
+    {4}
+}}
+.alphasized{{
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}}
+.repeating-background-gradient{{
+    {5}
+}}
+.content-wrapper{{
+    margin-top: -20px;
+    padding-top: 20px;
+}}
+.tags{{
+    margin-bottom: 0px;
+}}
+.tags li{{
+    display: inline;
+}}
+.tags li:link{{
+    color: #121212;
+}}
+.tags li:hover{{
+    color: #121212;
+    text-decoration: underline;
+}}
+.tags li:visited{{
+    color: #121212;
+}}
+.photo-post-img-wrapper{{
+    width: 100%;
+}}
+.photo-post-img{{
+    max-height: 700px;
+    max-width: 100%;
+    border-radius: 5px;
+}}
+.photo-post-set-img-wrapper{{
+    width: 100%;
+}}
+.photo-post-set-img{{
+    max-height: 700px;
+    max-width: 100%;
+    border-radius: 5px;
+}}
+.link-post-anchor{{
+    color: white;
+}}
+.link-post-anchor:hover{{
+    color: white;
+    text-decoration: underline;
+}}
+.link-post-anchor:visited{{
+    color: white;
+}}
+.link-post-anchor:link{{
+    color: white;
+}}
+.chat-name{{
+    color: #bcaaa4;
+    text-decoration: underline;
+}}
+.audio-post-content{{
+    border-radius: 5px;
+    width: 100%;
+}}
+.video-post-content-wrapper{{
+    max-width: 100%;
+    max-height: 700px;
+}}
+.video-post-content-wrapper iframe{{
+    width: 100%;
+    border-radius: 5px;
+}}
+.answer-person{{
+    font-weight: bold;
+    color: white;
+}}
+.answer-person:hover{{
+    text-decoration: underline;
+}}
+.reblog a{{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}}
+.reblog a:hover{{
+    text-decoration: underline;
+}}
+.quote a{{
+    color: white;
+}}
+.quote a:hover{{
+    text-decoration: underline;
+}}
+.tumblr-btn-class{{
+    display: inline;
+    float: right;
+}}
+.page-footer{{
+    margin-bottom: -20px;
+}}
+.title{{
+    font-family: {6};
+    font-weight: {7};
+}}
+.square{{
+    border-radius: 10px;
+}}
+.circle{{
+    border-radius: 1000px;
+}}
+.avatar{{
+    border-style: solid;
+    border-width: 3px;
+    border-color: {8};
+}}
+.avatar-wrapper{{
+    {9}
+}}
+.footer-thanks-item:hover{{
+    text-decoration: underline;
+}}
+.material-icons{{
+	color: white;
+}}
+
+/* Enable custom css, because it's nice to customize */
+{10}
+        </style>
+		<link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/typewriterfs/stylesheet.css?v=1">
+	</head>
+	<body>
+        <nav role="navigation" class="{11}">
+            <div class="nav-wrapper container">
+                <form action="/search" method="get" id="search" >
+                    <label class="searchbar-label">
+                        <input type="text" class="search-field" name="q" id="q" placeholder="Search yourtestblogsname" value="" autocomplete="off">
+                    </label>
+                </form>
+            </div>
+        </nav>
+        <div class="repeating-background-gradient">
+            <div class="section no-pad-bot banner-in-background" id="index-banner">
+                <div class="container alphasized hoverable">
+                    <br/><br/>
+                    {12}
+                    {13}
+                    <div class="container">
+                        {14}
+						<div class="row center">
+                            <a href="#" onclick="return false;" id="ask-me-anything-button" class="btn waves-effect waves-light {11}">Ask me anything!</a>
+                            <a href="#" onclick="return false;" id="likes-button" class="btn waves-effect waves-light {11}">Likes</a>
+                            <a href="#" onclick="return false;" id="archive-button" class="btn waves-effect waves-light {11}">Archive</a>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+                {15}
+            </div>
+            <div class="section content-wrapper">
+                <div class="container">
+                    <div class="autopagerize_page_element">
+						
+						<div class="card {11} hoverable">
+							<div class="card-content white-text">
+								<h5><span class="answer-person">Anonymous</span> asked:</h5>
+                                <p>Hey dude nicer dicer Website, but I have one question... Whacha doing with your freetime m8 xD</p>
+                                <h5><span class="answer-person"><a href="#" class="answerer" onclick="return false;">yourtestblogsname</a></span> answered:</h5>
+                                <p><p>Thanks :*</p><p>Definitely did not sleep last night, could need a coffee rn&hellip; But as you can see in the tags of my posts I made last night this was predictable :D</p></p>
+                                <br/><br/>
+                                <p>This is a small test for q&amp;a-posts :*</p><p>please be patient with me :D</p>
+                                <br><span class="reblog">Reblogged from <a href="#" onclick="return false;">yourtestblogsname</a></span>
+                                <div class="divider"></div>
+                                <ul class="tags">
+                                    <a href="#" onclick="return false;"><li>still testing my shit</li></a>
+                                    <a href="#" onclick="return false;"><li>hopefully soon over</li></a>
+                                    <a href="#" onclick="return false;"><li>going through hell right now</li></a>
+                                    <a href="#" onclick="return false;"><li>holy shit</li></a>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">1 note</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <h5><span class="answer-person">Anonymous</span> asked:</h5>
+                                <p>Hey dude nicer dicer Website, but I have one question... Whacha doing with your freetime m8 xD</p>
+                                <br/><br/>
+                                <p>Thanks :*</p><p>Definitely did not sleep last night, could need a coffee rn&hellip; But as you can see in the tags of my posts I made last night this was predictable :D</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">1 note</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <span class="card-title">Infinite Scrolling in custom themes</span>
+                                <p><p>Are you trying to create a custom theme with infinite scroll feature, but don&rsquo;t find a proper explanation how to do so?</p><p>Well I had the this problem, and to save you from a pain in the ass I&rsquo;ll just show you here:</p><p>You probably found a couple of tutorials linking to&nbsp;<a href="#" onclick="return false;">http://codysherman.com/tools/infinite-scrolling/code</a>, which would (if you&rsquo;d look into the developer console of your browser on your blog with the theme) only return 404 errors. This is because the blog, which hosted this file has been deleted (I don&rsquo;t know for which reason). Yet this file is still availabe in tumblrs assets with this link:&nbsp;<a href="#" onclick="return false;">http://static.tumblr.com/q0etgkr/EIBmz7s0p/infinitescrolling.js</a></p><p>Now this script though requires you to put a container around your posts with the class&nbsp;&ldquo;autopagerize_page_element&rdquo;.</p><p>So all you have to do is to include the script in your head-Tag and create the wrapper around your posts. This should then look somewhat like this:</p><pre><code>  ...
+  &lt;script type="text/javascript" src="http://static.tumblr.com/q0etgkr/EIBmz7s0p/infinitescrolling.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;div class="autopagerize_page_element"&gt;
+    {{block:Posts}}
+      ...
+    {{/block:Posts}}
+    &lt;/div&gt;
+    ...
+  &lt;/body&gt;</code></pre><p>Afterwards simply save your theme and try it out. The infinite scrolling should now work (at least it did for me).</p><p>
+  If this post helped you, you should spread the word for others.</p></p>
+                                <div class="divider"></div>
+                                <ul class="tags">
+                                    <a href="#" onclick="return false;"><li>custom theme</li></a>
+                                    <a href="#" onclick="return false;"><li>infinite scroll</li></a>
+                                    <a href="#" onclick="return false;"><li>developer</li></a>
+                                    <a href="#" onclick="return false;"><li>tumblr</li></a>
+                                    <a href="#" onclick="return false;"><li>theme</li></a>
+                                    <a href="#" onclick="return false;"><li>custom</li></a>
+                                    <a href="#" onclick="return false;"><li>scroll</li></a>
+                                    <a href="#" onclick="return false;"><li>help</li></a>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-image hoverable">
+                                <a href="#" onclick="return false;">
+                                    <img src="http://65.media.tumblr.com/tumblr_md4w7bOQs41qz8q0ho1_r1_500h.jpg" alt="staff:
+&ldquo; This is HUGE!
+Panoramas just got a big new view on Tumblr. Try it on your blog, the Dashboard, and the latest iPhone/iPad app too!
+This works automatically for super-wide (3:1) high-res (1000px wide) photo uploads. And theme developers can...">
+                                    <span class="card-title white-text">This is HUGE!</span>
+                                </a>
+                            </div>
+                            <div class="card-content white-text">
+                                <p><p><a class="tumblr_blog" href="#" onclick="return false;">staff</a>:</p>
+<blockquote>
+<p><strong>This is HUGE!</strong></p>
+<p>Panoramas just got a <em>big new view</em> on Tumblr. Try it on your blog, the Dashboard, and the latest <a href="#" onclick="return false;">iPhone/iPad</a> app too!</p>
+<p>This works automatically for super-wide (<code>3:1</code>) high-res (<code>1000px wide</code>) photo uploads. And theme developers can now style panoramas in Tumblr themes with the <code><a href="#" onclick="return false;">{{block:Panorama}}</a></code> tag.</p>
+<p><em>Panorama by <a href="#" onclick="return false;">Blaine Davis</a></em></p>
+</blockquote></p>
+                                <br><span class="reblog">Reblogged from <a href="#" onclick="return false;">staff</a></span>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">15,963 notes</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <span class="reblog">Reblogged from <a href="#" onclick="return false;">kaurou</a></span><br><br>
+                                <div class="photo-post-img-wrapper center">
+                                    <a href="#" onclick="return false;"><img src="http://66.media.tumblr.com/cc3055fef550cf2019566ba5c65bb69f/tumblr_o7gf1yHJng1uu2lqeo1_1280.jpg" alt="" class="photo-post-img hoverable"></a>
+                                </div><br>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">13 notes</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <span class="reblog">Reblogged from <a href="#" onclick="return false;">horridtown</a></span><br><br>
+                                <div class="photo-post-img-wrapper center">
+                                    <a href="#" onclick="return false;"><img src="http://67.media.tumblr.com/ca62371c7bc17357c5d8db1c177b6f6c/tumblr_o7xfk8tDjI1v5nypxo1_1280.png" alt="horridtown:
+&ldquo; my first pano of potato!
+andprobablymylastughhsohard
+&rdquo;" class="photo-post-img hoverable"></a>
+                                </div><br>
+                                <p><p><a class="tumblr_blog" href="#" onclick="return false;">horridtown</a>:</p>
+<blockquote>
+<p>my first pano of potato!<br><strike>andprobablymylastughhsohard</strike></p>
+</blockquote></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">193 notes</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <span class="reblog">Reblogged from <a href="#" onclick="return false;">photorator</a></span><br><br>
+                                <div class="photo-post-img-wrapper center">
+                                    <a href="#" onclick="return false;"><img src="http://67.media.tumblr.com/a3c5b12b9d504599696937cd31f66a8e/tumblr_o8azoqmSKe1s1qnw8o1_1280.jpg" alt="photorator:
+&ldquo; Denali Panorama
+&rdquo;" class="photo-post-img hoverable"></a>
+                                </div><br>
+                                <p><p><a class="tumblr_blog" href="#" onclick="return false;">photorator</a>:</p>
+<blockquote>
+<p>Denali Panorama</p>
+</blockquote></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">9 notes</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <span class="reblog">Reblogged from <a href="#" onclick="return false;">smartadze</a></span><br><br>
+                                <div class="photo-post-set-img-wrapper center">
+                                    <img src="http://67.media.tumblr.com/234480d433d81c26d44b685def2a4b51/tumblr_o84oeguxa31rnxqgho1_1280.jpg" alt="smartadze:
+&ldquo; Mirages
+&rdquo;" class="photo-post-img hoverable">
+                                </div><br><div class="photo-post-set-img-wrapper center">
+                                    <img src="http://67.media.tumblr.com/ae6aecac8ad2722756c58b60bbcb1c55/tumblr_o84oeguxa31rnxqgho2_1280.jpg" alt="smartadze:
+&ldquo; Mirages
+&rdquo;" class="photo-post-img hoverable">
+                                </div><br>
+                                <p><p><a class="tumblr_blog" href="#" onclick="return false;">smartadze</a>:</p>
+<blockquote>
+<p>Mirages</p>
+</blockquote></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">18 notes</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <p>
+                                    <a href="#" onclick="return false;" class="link-post-anchor">links | Tumblr</a> -- tumblr.com
+                                    <br><br><p>This is the page that shows up, when you search for&nbsp;&ldquo;links&rdquo; on tumblr</p>
+                                </p>
+                                <div class="divider"></div>
+                                <ul class="tags">
+                                    <a href="#" onclick="return false;"><li>still testing theme</li></a>
+                                    <a href="#" onclick="return false;"><li>lol</li></a>
+                                    <a href="#" onclick="return false;"><li>dev live</li></a>
+                                    <a href="#" onclick="return false;"><li>its 11pm</li></a>
+                                    <a href="#" onclick="return false;"><li>toooo late</li></a>
+                                    <a href="#" onclick="return false;"><li>gonna need coffee tomorrow</li></a>
+                                    <a href="#" onclick="return false;"><li>or why not now?</li></a>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						
+						<div class="card {11} hoverable">
+                            <div class="card-content white-text">
+                                <span class="card-title">Reason #3 why I should be asleep</span>
+                                <ul>
+                                    <li><span class="chat-name">Oikawa:</span>: *poses for his fan girls*</li>
+									<li><span class="chat-name">Iwaizumi:</span>: *watches with an irk mark*</li>
+									<li><span class="chat-name">Matsu:</span>: You like him don&#039;t you?</li>
+									<li><span class="chat-name">Iwaizumi:</span>: I&#039;d like to hit him with a car. </li>
+									<li><span class="chat-name">Matsu and Maki:</span>: oh.</li>
+                                </ul>
+                                <span class="reblog">Reblogged from <a href="#" onclick="return false;">anime-thoughts-imagines-more</a></span>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" onclick="return false;">15 notes</a>
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{11}-text"> </a>
+                                <div class="tumblr-btn-class"><div class="like_button" data-post-id="145504460740" data-blog-name="hellowprl" id="like_button_145504460740"><a href="#" onclick="return false;"><i class="material-icons">&#xE87D;</i></a></div></div>
+                                <div class="tumblr-btn-class"><a href="#" class="reblog_button" style="display: block;width:20px;height:20px;" onclick="return false;"><i class="material-icons">&#xE040;</i></a></div>
+                            </div>
+                        </div>
+						{16}
+                    </div>
+                </div>
+                <footer class="page-footer {11}" id="footer">
+                    <div class="container">
+						{17}
+                        <div class="row">
+                            <div class="col l5 s12">
+                                <h5 class="white-text">Theme by Jean-Pierre Hotz</h5>
+                                <p class="grey-text text-lighten-4">You can use this theme if you like.<br>It'll just cost you the effort of copy & pasting it :P</p>
+                            </div>
+                            <div class="col l6 offset-l1 s12">
+                                <h5 class="white-text">Thanks to:</h5>
+                                <ul>
+                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Tumblr. for giving me inspiration and room to be creative</a></li>
+                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Myself for being so patient with the infinite scrolling feature.</a></li>
+                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Materialize CSS (Framework used in this Theme)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="container">
+                            © 2016 Jean-Pierre Hotz
+                            <a class="grey-text text-lighten-4 right" target="_blank" href="#" onclick="return false;">Powered by tumblr.</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script type="text/javascript">
+(function($){{
+  $(function(){{
+    $('.button-collapse').sideNav();
+  }});
+}})(jQuery);
+        </script>
+		{18}
+    </body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE HTML>
+<!-- 
+   		Copyright 2016 Jean-Pierre Hotz
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<html>
+	<head>
+		<title>{Title}</title>
+		<meta charset="UTF-8"/>
+        
+        <link rel="shortcut icon" href="{Favicon}">
+        {block:Hidden}
+        <meta name="if:Endless scrolling" content="1">
+        <meta name="if:Sliding header" content="1">
+        <meta name="if:Syntax highlighting" content="0">
+        <meta name="if:Background as stripes" content="1">
+        <meta name="color:First Background stripe color" content="#ff0011">
+        <meta name="color:Second Background stripe color" content="#80ff00">
+        <meta name="color:Avatar border color" content="#644b74">
+        <meta name="if:Show Quotes" content="1">
+        <meta name="text:Quotes JavaScript Code" content="Look into the footer of the theme for an explanation!">
+        <meta name="select:ThemeColor" content="red" title="Red">
+        <meta name="select:ThemeColor" content="purple" title="Purple">
+        <meta name="select:ThemeColor" content="deep-purple" title="Deep Purple">
+        <meta name="select:ThemeColor" content="indigo" title="Indigo Blue">
+        <meta name="select:ThemeColor" content="blue" title="Blue">
+        <meta name="select:ThemeColor" content="light-blue" title="Light Blue">
+        <meta name="select:ThemeColor" content="cyan" title="Cyan">
+        <meta name="select:ThemeColor" content="teal" title="Teal">
+        <meta name="select:ThemeColor" content="green" title="Green">
+        <meta name="select:ThemeColor" content="light-green" title="Light Green">
+        <meta name="select:ThemeColor" content="lime" title="Lime">
+        <meta name="select:ThemeColor" content="yellow" title="Yellow">
+        <meta name="select:ThemeColor" content="amber" title="Amber">
+        <meta name="select:ThemeColor" content="orange" title="Orange">
+        <meta name="select:ThemeColor" content="deep-orange" title="Deep Orange">
+        <meta name="select:ThemeColor" content="brown" title="Brown">
+        {/block:Hidden}
+    	<!--Import Google Icon Font-->
+    	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    	<!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    	<!--Let browser know website is optimized for mobile-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {block:IfShowQuotes}<script type="text/javascript">
+var current_quote_index = 0;
+var quotes = [
+    {text:Quotes JavaScript Code}
+];
+        </script>{/block:IfShowQuotes}
+        {block:IfEndlessScrolling}<script type="text/javascript" src="http://static.tumblr.com/q0etgkr/EIBmz7s0p/infinitescrolling.js"></script>{/block:IfEndlessScrolling}
+
+        <style type="text/css">
+.white-text a{
+    color:white;
+}
+.white-text a:hover{
+    text-decoration: underline;
+}
+.banner-in-background{
+    {block:ShowHeaderImage}background-image: url({HeaderImage});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: {block:IfSlidingHeader}fixed{/block:IfSlidingHeader}{block:IfNotSlidingHeader}scroll{/block:IfNotSlidingHeader};{/block:ShowHeaderImage}
+}
+.alphasized{
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+.repeating-background-gradient{
+    {block:IfBackgroundAsStripes}background: repeating-linear-gradient(
+        45deg,
+        {color:First Background stripe color},
+        {color:First Background stripe color} 30px,
+        {color:Second Background stripe color} 30px, 
+        {color:Second Background stripe color} 60px
+    );{/block:IfBackgroundAsStripes}{block:IfNotBackgroundAsStripes}
+    background-color: {BackgroundColor};
+    {/block:IfNotBackgroundAsStripes}
+}
+.content-wrapper{
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.tags{
+    margin-bottom: 0px;
+}
+.tags li{
+    display: inline;
+}
+.tags li:link{
+    color: #121212;
+}
+.tags li:hover{
+    color: #121212;
+    text-decoration: underline;
+}
+.tags li:visited{
+    color: #121212;
+}
+.photo-post-img-wrapper{
+    width: 100%;
+}
+.photo-post-img{
+    max-height: 700px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+.photo-post-set-img-wrapper{
+    width: 100%;
+}
+.photo-post-set-img{
+    max-height: 700px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+.link-post-anchor{
+    color: white;
+}
+.link-post-anchor:hover{
+    color: white;
+    text-decoration: underline;
+}
+.link-post-anchor:visited{
+    color: white;
+}
+.link-post-anchor:link{
+    color: white;
+}
+.chat-name{
+    color: #bcaaa4;
+    text-decoration: underline;
+}
+.audio-post-content{
+    border-radius: 5px;
+    width: 100%;
+}
+.video-post-content-wrapper{
+    max-width: 100%;
+    max-height: 700px;
+}
+.video-post-content-wrapper iframe{
+    width: 100%;
+    border-radius: 5px;
+}
+.answer-person{
+    font-weight: bold;
+    color: white;
+}
+.answer-person:hover{
+    text-decoration: underline;
+}
+.reblog a{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.reblog a:hover{
+    text-decoration: underline;
+}
+.quote a{
+    color: white;
+}
+.quote a:hover{
+    text-decoration: underline;
+}
+.tumblr-btn-class{
+    display: inline;
+    float: right;
+}
+.page-footer{
+    margin-bottom: -20px;
+}
+.title{
+    font-family: {TitleFont};
+    font-weight: {TitleFontWeight};
+}
+.square{
+    border-radius: 10px;
+}
+.circle{
+    border-radius: 1000px;
+}
+.avatar{
+    border-style: solid;
+    border-width: 3px;
+    border-color: {color:Avatar border color};
+}
+.avatar-wrapper{
+    {block:ShowTitle}margin-bottom: -65px;{/block:ShowTitle}
+}
+.footer-thanks-item:hover{
+    text-decoration: underline;
+}
+
+/* Enable custom css, because it's nice to customize */
+{CustomCSS}
+        </style>
+	</head>
+	<body>
+        <nav role="navigation" class="{select:ThemeColor}">
+            <div class="nav-wrapper container">
+                <form action="/search" method="get" id="search" >
+                    <label class="searchbar-label">
+                        <input type="text" class="search-field" name="q" id="q" placeholder="{lang:Search Blog}" value="{SearchQuery}" autocomplete="off">
+                    </label>
+                </form>
+            </div>
+        </nav>
+        <div class="repeating-background-gradient">
+            <div class="section no-pad-bot banner-in-background" id="index-banner">
+                <div class="container alphasized hoverable">
+                    <br/><br/>
+                    {block:ShowAvatar}<div class="row center avatar-wrapper">
+                        <a href="/"><img src="{PortraitURL-128}" class="{AvatarShape} avatar hoverable"></a>
+                    </div>{/block:ShowAvatar}
+                    {block:ShowTitle}<a href="{BlogURL}"><h1 class="title header center {select:ThemeColor}-text">{Title}</h1></a>{/block:ShowTitle}
+                    <div class="container">
+                        {block:ShowDescription}<div class="row center">
+                            <h5 class="header col s12 light">{Description}</h5>
+                        </div>{/block:ShowDescription}<div class="row center">
+                            {block:AskEnabled}<a href="/ask" id="ask-me-anything-button" class="btn waves-effect waves-light {select:ThemeColor}">{AskLabel}</a>{/block:AskEnabled}
+                            {block:Likes}<a href="/likes" id="likes-button" class="btn waves-effect waves-light {select:ThemeColor}">LIKES</a>{/block:Likes}
+                            <a href="/archive" id="archive-button" class="btn waves-effect waves-light {select:ThemeColor}">ARCHIVE</a>
+                            {block:HasPages}
+                                {block:Pages}<a href="{URL}" class="btn waves-effect waves-light {select:ThemeColor}">{Label}</a>{/block:Pages}
+                            {block:HasPages}
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+                {block:IfShowQuotes}<div class="container">
+                    <div class="row center">
+                        <div class="col s10 offset-s1">
+                            <div class="card {select:ThemeColor} hoverable">
+                                <div class="card-content white-text">
+                                    <span class="card-title" id="quote-caption">Quote of the week</span>
+                                    <p id="quote-text"></p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#" onclick="setRandomQuote(); return false;">Get a new quote</a>
+                                    <a href="#" onclick="setNextQuote(); return false;">Get the next quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{/block:IfShowQuotes}
+                {block:IfNotShowQuotes}<div style="height: 15px;"></div>{/block:IfNotShowQuotes}
+            </div>
+            <div class="section content-wrapper">
+                <div class="container">
+                    <div class="autopagerize_page_element">
+                        {block:Posts}<div class="card {select:ThemeColor} hoverable">
+                            {block:Text}<div class="card-content white-text">
+                                {block:Title}<span class="card-title">{Title}</span>{/block:Title}
+                                <p>{Body}</p>
+                                {block:RebloggedFrom}<br><span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Text}{block:Photo}<div class="card-content white-text">
+                                {block:RebloggedFrom}<span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span><br><br>{/block:RebloggedFrom}
+                                <div class="photo-post-img-wrapper center">
+                                    {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="photo-post-img hoverable">{LinkCloseTag}
+                                </div><br>
+                                {block:Caption}<p>{Caption}</p>{/block:Caption}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Photo}{block:Panorama}<div class="card-image hoverable">
+                                {LinkOpenTag}
+                                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+                                    <span class="card-title white-text">This is HUGE!</span>
+                                {LinkCloseTag}
+                            </div>
+                            <div class="card-content white-text">
+                                {block:Caption}<p>{Caption}</p>{/block:Caption}
+                                {block:RebloggedFrom}<br><span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Panorama}{block:Photoset}<div class="card-content white-text">
+                                {block:RebloggedFrom}<span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span><br><br>{/block:RebloggedFrom}
+                                {block:Photos}<div class="photo-post-set-img-wrapper center">
+                                    {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="photo-post-img hoverable">{LinkCloseTag}
+                                </div><br>{/block:Photos}
+                                {block:Caption}<p>{Caption}</p>{/block:Caption}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Photoset}{block:Quote}<div class="card-content white-text">
+                                {block:RebloggedFrom}<span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span><br>{/block:RebloggedFrom}
+                                <p class="quote">
+                                    <blockquote>"{Quote}"</blockquote>{block:Source}
+                                    -- {Source}{/block:Source}
+                                </p>
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Quote}{block:Link}{block:Thumbnail}<div class="card-image hoverable">
+                                <a href="{URL}"><img src="{Thumbnail-HighRes}"></a>
+                            </div>
+                            {/block:Thumbnail}<div class="card-content white-text">
+                                <p>
+                                    <a href="{URL}" {Target} class="link-post-anchor">{Name}</a>{block:Host} -- {Host}{/block:Host}
+                                    {block:Author}<br>Created by {Author}{/block:Author}
+                                    {block:Description}<br><br>{Description}{/block:Description}
+                                </p>
+                                {block:RebloggedFrom}<br><span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Link}{block:Chat}<div class="card-content white-text">
+                                {block:Title}<span class="card-title">{Title}</span>{/block:Title}
+                                <ul>
+                                    {block:Lines}<li>{block:Label}<span class="chat-name">{Label}</span>: {/block:Label}{Line}</li>
+                                {/block:Lines}</ul>
+                                {block:RebloggedFrom}<span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Chat}{block:Audio}<div class="card-content white-text">
+                                {block:Caption}<span class="card-title">{Caption}</span><br>{/block:Caption}
+                                {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+                                {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+                                {block:ExternalAudio}<a href="{ExternalAudioURL}" class="btn waves-effect waves-light {select:ThemeColor} darken-2" download>Download</a><br>{/block:ExternalAudio}
+                                {block:PlayCount}<br>{PlayCountWithLabel}{/block:PlayCount} {block:Artist}<br>Artist: {Artist}{/block:Artist}
+                                {block:TrackName}<br>Track: {TrackName}{/block:TrackName}
+                                {block:Album}<br>Album: {Album}{/block:Album}
+                                {block:RebloggedFrom}<br><br><span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Audio}{block:Video}<div class="card-content white-text">
+                                {block:Caption}<span class="card-title">{Caption}</span><br>{/block:Caption}
+                                <div class="video-post-content-wrapper center hoverable">
+                                    {VideoEmbed-700}
+                                </div><br>
+                                {PlayCountWithLabel}
+                                {block:RebloggedFrom}<br><br><span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Video}{block:Answer}<div class="card-content white-text">
+                                <h5><span class="answer-person">{Asker}</span> asked:</h5>
+                                <p>{Question}</p>
+                                {block:Answerer}<h5><span class="answer-person">{Answerer}</span> answered:</h5>
+                                <p>{Answer}</p>{/block:Answerer}
+                                <br/><br/>
+                                {Replies}
+                                {block:RebloggedFrom}<br><span class="reblog">Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a></span>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="divider"></div>
+                                <ul class="tags">
+                                    {block:ContentSource}<li>Source: <a href="{SourceURL}">{SourceTitle}</a></li>{/block:ContentSource}
+                                    {block:Tags}<a href="{TagURL}"><li>{Tag}</li></a>
+                                    {/block:Tags}
+                                </ul>{/block:HasTags}
+                            </div>{/block:Answer}{block:Date}
+                            <div class="card-action">
+                                {block:NoteCount}<a href="#" onclick="return false;">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                <!-- To stretch the bottom of the card... posts without notes were ugly :/ -->
+                                <a class="{select:ThemeColor}-text"> </a>
+                                <div class="tumblr-btn-class">{LikeButton}</div>
+                                <div class="tumblr-btn-class">{ReblogButton}</div>
+                            </div>{/block:Date}
+                        </div>{/block:Posts}
+                        {block:IfNotEndlessScrolling}{block:Pagination}<div class="card {select:ThemeColor} hoverable">
+                            <div class="card-content">
+                                <br/>
+                                <div class="row center">
+                                    {block:PreviousPage}<a href="{PreviousPage}" id="previous-page-button" class="btn waves-effect waves-light not-disabled {select:ThemeColor}">&lt;&lt;</a>{/block:PreviousPage}
+                                    <a href="#" onclick="return false;" class="btn waves-effect waves-light {select:ThemeColor}">{CurrentPage} / {TotalPages}</a>
+                                    {block:NextPage}<a href="{NextPage}" id="next-page-button" class="btn waves-effect waves-light not-disabled {select:ThemeColor}">&gt;&gt;</a>{/block:NextPage}
+                                </div>
+                            </div>
+                        </div>{/block:Pagination}{/block:IfNotEndlessScrolling}
+                    </div>
+                </div>
+                <footer class="page-footer {select:ThemeColor}" id="footer">
+                    <div class="container">
+                        {block:IfEndlessScrolling}<div class="row center">
+                            <h3 class="grey-text text-lighten-4">This seems to be it with this blog.</h3>
+                        </div>{/block:IfEndlessScrolling}
+                        <div class="row">
+                            <div class="col l5 s12">
+                                <h5 class="white-text">Theme by Jean-Pierre Hotz</h5>
+                                <p class="grey-text text-lighten-4">You can use this theme if you like.<br>It'll just cost you the effort of copy & pasting it :P</p>
+                            </div>
+                            <div class="col l6 offset-l1 s12">
+                                <h5 class="white-text">Thanks to:</h5>
+                                <ul>
+                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="http://www.tumblr.com">Tumblr. for giving me inspiration and room to be creative</a></li>
+                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="http://hellowprl.tumblr.com/post/145478060065/infinite-scrolling-explanation">Myself for being so patient with the infinite scrolling feature.</a></li>
+                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="http://materializecss.com/about.html">Materialize CSS (Framework used in this Theme)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="container">
+                            © 2016 Jean-Pierre Hotz
+                            <a class="grey-text text-lighten-4 right" target="_blank" href="http://www.tumblr.com">Powered by tumblr.</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script type="text/javascript">
+(function($){
+  $(function(){
+    $('.button-collapse').sideNav();
+  });
+})(jQuery);
+        </script>
+        {block:IfShowQuotes}<script type="text/javascript">
+var setWeeklyQuote = function(){
+    if(quotes.length != 0){
+        var now = new Date();
+        var onejan = new Date(now.getFullYear(), 0, 1);
+        var week = Math.ceil( (((now - onejan) / 86400000) + onejan.getDay() + 1) / 7 );
+
+        current_quote_index = week % quotes.length;
+        document.getElementById("quote-text").innerHTML = quotes[current_quote_index];
+    }
+};
+
+var setRandomQuote = function(){
+    if(quotes.length != 0){
+        document.getElementById("quote-caption").innerHTML = "Quote";
+        current_quote_index = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote-text").innerHTML = quotes[current_quote_index];
+    }
+}
+
+var setNextQuote = function(){
+    if(quotes.length != 0){
+        document.getElementById("quote-caption").innerHTML = "Quote";
+        current_quote_index = (current_quote_index + 1) % quotes.length;
+        document.getElementById("quote-text").innerHTML = quotes[current_quote_index];
+    }
+}
+
+setWeeklyQuote();
+        </script>{/block:IfShowQuotes}
+        {block:IfSyntaxHighlighting}<script type="text/javascript" src="http://static.tumblr.com/ehm1tdz/Mhunye5t3/highlight.pack.js"/></script>
+        <script type="text/javascript">
+            (function($) {
+                $(document).ready(function() {
+                    $('.card-content pre code').each(function(i, block) {
+                        hljs.highlightBlock(block);
+                    });
+                });
+            })(window.jQuery);
+        </script>{/block:IfSyntaxHighlighting}
+    </body>
+</html>
