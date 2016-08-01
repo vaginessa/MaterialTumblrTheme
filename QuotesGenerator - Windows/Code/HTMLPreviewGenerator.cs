@@ -1,5 +1,4 @@
-﻿using System;
-/* 
+﻿/* 
     Copyright 2016 Jean-Pierre Hotz
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,6 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
+using System;
 using System.Drawing;
 
 namespace TumblrMaterialThemeQuotesGenerator
@@ -45,6 +45,7 @@ namespace TumblrMaterialThemeQuotesGenerator
         public string QuotesJavaScriptCode { set; get; }
         public bool InfiniteScrolling { set; get; }
         public string CustomCSS { get; set; }
+        public bool PayRespectToMyWork { get; set; }
         #endregion
 
         #region Constructors
@@ -81,11 +82,13 @@ namespace TumblrMaterialThemeQuotesGenerator
             InfiniteScrolling = DefaultValues.InfiniteScrolling;
 
             CustomCSS = DefaultValues.CustomCSS;
+
+            PayRespectToMyWork = DefaultValues.PayRespectToMyWork;
         }
 
         public MaterialDesignTumblrThemeHTMLPreview(string title, string description, string headerimage, string avatarimage, ImageShape avatarShape, string titleFont, bool titleBold,
                 Color bgColor, bool showHeaderImage, bool showAvatar, bool showTitle, bool showDescription, Color firstStripeColor, Color secondStripeColor, Color avatarBorderColor,
-                MaterialColor themeColor, bool slidingHeader, bool backgroundAsStripes, bool showQuotes, string quotesJavaScriptCode, bool infinitescrolling, string customcss)
+                MaterialColor themeColor, bool slidingHeader, bool backgroundAsStripes, bool showQuotes, string quotesJavaScriptCode, bool infinitescrolling, string customcss, bool payrespectomywork)
         {
             if(title == null)
                 this.Title = DefaultValues.Title;
@@ -157,6 +160,8 @@ namespace TumblrMaterialThemeQuotesGenerator
                 this.CustomCSS = DefaultValues.CustomCSS;
             else
                 this.CustomCSS = customcss;
+
+            PayRespectToMyWork = payrespectomywork;
         }
         #endregion
 
@@ -218,7 +223,35 @@ namespace TumblrMaterialThemeQuotesGenerator
 17 - {{block:IfEndlessScrolling}}<div class="row center">
             <h3 class="grey-text text-lighten-4">This seems to be it with this blog.</h3>
         </div>{{/block:IfEndlessScrolling}}
-18 - {{block:IfShowQuotes}}<script type="text/javascript">
+
+18 - <div class="row">
+        <div class="col l5 s12">
+            <h5 class="white-text">Theme by Jean-Pierre Hotz</h5>
+            <p class="grey-text text-lighten-4">You can use this theme if you like.<br>It'll just cost you the effort of copy & pasting it :P</p>
+        </div>
+        <div class="col l6 offset-l1 s12">
+            <h5 class="white-text">Thanks to:</h5>
+            <ul>
+                <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Tumblr. for giving me inspiration and room to be creative</a></li>
+                <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Myself for being so patient with the infinite scrolling feature.</a></li>
+                <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Materialize CSS (Framework used in this Theme)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <a href="#" onclick="alert('Error 404 - Gaming PC not found.'); return false;"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Wu7ob8uuz/steam.png"/></a>
+        <a href="#" onclick="alert('I\'m not going to publish my phone number, although you may request it personally ;)'); return false"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Pu5ob8uvq/whatsapp.png"/></a>
+        <a href="#" onclick="alert('Sorry, but I really dislike Facebook.'); return false;"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/qcBob8ut4/facebook.png"/></a>
+        <a href="https://plus.google.com/u/0/114813713589155713629/posts" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Okpob90n3/go_ogle-plus_icon.png"/></a>
+        <a href="https://www.twitch.tv/sirjonny1998/profile" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Qqiob8uva/twitch.png"/></a>
+        <a href="https://twitter.com/HotzJean" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/rJ3ob8uve/twitter.png"/></a>
+        <a href="https://www.instagram.com/jonny9298/" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/6Fcob8uuh/instagram.png"/></a>
+        <a href="http://stackoverflow.com/users/6665105/jonny9298" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/9Phob8uut/stackoverflow.png"/></a>
+        <a href="https://github.com/JP1998" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/wXMob8uu5/github.png"/></a>
+        <a href="http://bitchyprincefun.tumblr.com/" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/tKzob90m3/tum_blr_icon.png"/></a>
+    </div>
+            
+19 - {{block:IfShowQuotes}}<script type="text/javascript">
 var setWeeklyQuote = function(){{
     if(quotes.length != 0){{
         var now = new Date();
@@ -261,19 +294,11 @@ setWeeklyQuote();
             string avatar = (ShowAvatar) ? "<div class=\"row center avatar-wrapper\">\n\t\t\t\t\t<a href=\"#\"><img src=\"" + AvatarImage + "\" class=\"" + ImageShapeToString(AvatarShape) + " avatar hoverable\"></a>\n\t\t\t\t</div>\n\t\t\t\t" : "";
             string title = (ShowTitle) ? "<a href=\"#\"><h1 class=\"title header center " + MaterialColorToString(ThemeColor) + "-text\">" + Title + "</h1></a>\n\t\t\t\t" : "";
             string description = (ShowDescription) ? "<div class=\"row center\">\n\t\t\t\t\t\t\t<h5 class=\"header col s12 light\">" + Description + "</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t" : "";
-            string quotescontainer = (ShowQuotes) ?
-                "<div class=\"container\">\n\t\t\t\t\t<div class=\"row center\">\n\t\t\t\t\t\t<div class=\"card " + MaterialColorToString(ThemeColor) + " hoverable\">\n\t\t\t\t\t\t\t<div class=\"card-content white-text\">\n\t\t\t\t\t\t\t\t<span " +
-                "class=\"card-title\" id=\"quote-caption\">Quote of the week</span>\n\t\t\t\t\t\t\t\t<p id=\"quote-text\"></p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"setRandomQuote(); " + 
-                "return false;\">Get a new quote</a>\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"setNextQuote(); return false;\">Get the next quote</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>" :
-                "<div style=\"height: 15px; \"></div>\n\t\t\t\t";
-            string pagination = (!InfiniteScrolling) ? "<div class=\"card " + MaterialColorToString(ThemeColor) + " hoverable\">\n\t\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t\t<br/>\n\t\t\t\t\t\t\t\t<div class=\"row center\">\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" class=\"btn waves-effect waves-light " + 
-                MaterialColorToString(ThemeColor) + "\">1 / 2</a>\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" id=\"next-page-button\" class=\"btn waves-effect waves-light not-disabled " + MaterialColorToString(ThemeColor) + "\">&gt;&gt;</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>" : "";
+            string quotescontainer = (ShowQuotes) ? "<div class=\"container\">\n\t\t\t\t\t<div class=\"row center\">\n\t\t\t\t\t\t<div class=\"card " + MaterialColorToString(ThemeColor) + " hoverable\">\n\t\t\t\t\t\t\t<div class=\"card-content white-text\">\n\t\t\t\t\t\t\t\t<span class=\"card-title\" id=\"quote-caption\">Quote of the week</span>\n\t\t\t\t\t\t\t\t<p id=\"quote-text\"></p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"setRandomQuote(); return false;\">Get a new quote</a>\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"setNextQuote(); return false;\">Get the next quote</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>" : "<div style=\"height: 15px; \"></div>\n\t\t\t\t";
+            string pagination = (!InfiniteScrolling) ? "<div class=\"card " + MaterialColorToString(ThemeColor) + " hoverable\">\n\t\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t\t<br/>\n\t\t\t\t\t\t\t\t<div class=\"row center\">\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" class=\"btn waves-effect waves-light " + MaterialColorToString(ThemeColor) + "\">1 / 2</a>\n\t\t\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" id=\"next-page-button\" class=\"btn waves-effect waves-light not-disabled " + MaterialColorToString(ThemeColor) + "\">&gt;&gt;</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>" : "";
             string endcaption = (InfiniteScrolling) ? "<div class=\"row center\">\n\t\t\t\t\t\t\t<h3 class=\"grey-text text-lighten-4\">This seems to be it with this blog.</h3>\n\t\t\t\t\t\t</div>" : "";
-            string showquotescode = (ShowQuotes) ? "<script type=\"text/javascript\">\nvar setWeeklyQuote = function(){\n\tif (quotes.length != 0){\n\t\tvar now = new Date();\n\t\tvar onejan = new Date(now.getFullYear(), 0, 1);\n\t\tvar week = " +
-                "Math.ceil((((now - onejan) / 86400000) + onejan.getDay() + 1) / 7);\n\t\t\n\t\tcurrent_quote_index = week % quotes.length;\n\t\tdocument.getElementById(\"quote-text\").innerHTML = quotes[current_quote_index];\n\t}\n};\n\nvar setRandomQuote " +
-                "= function(){\n\tif (quotes.length != 0){\n\t\tdocument.getElementById(\"quote-caption\").innerHTML = \"Quote\";\n\t\tcurrent_quote_index = Math.floor(Math.random() * quotes.length);\n\t\tdocument.getElementById(\"quote-text\").innerHTML = " +
-                "quotes[current_quote_index];\n\t}\n};\n\nvar setNextQuote = function(){\n\tif (quotes.length != 0){\n\t\tdocument.getElementById(\"quote-caption\").innerHTML = \"Quote\";\n\t\tcurrent_quote_index = (current_quote_index + 1) % quotes.length;\n" +
-                "\t\tdocument.getElementById(\"quote-text\").innerHTML = quotes[current_quote_index];\n\t}\n};\n\nsetWeeklyQuote();\n\t\t</script>" : "";
+            string respectingfooter = (PayRespectToMyWork) ? "<div class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col l5 s12\">\n\t\t\t\t\t\t\t\t<h5 class=\"white-text\">Theme by Jean-Pierre Hotz</h5>\n\t\t\t\t\t\t\t\t<p class=\"grey-text text-lighten-4\">You can use this theme if you like.<br>It'll just cost you the effort of copy & pasting it :P</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col l6 offset-l1 s12\">\n\t\t\t\t\t\t\t\t<h5 class=\"white-text\">Thanks to:</h5>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><a class=\"grey-text footer-thanks-item text-lighten-3\" target=\"_blank\" href=\"#\" onclick=\"return false;\">Tumblr. for giving me inspiration and room to be creative</a></li>\n\t\t\t\t\t\t\t\t\t<li><a class=\"grey-text footer-thanks-item text-lighten-3\" target=\"_blank\" href=\"#\" onclick=\"return false;\">Myself for being so patient with the infinite scrolling feature.</a></li>\n\t\t\t\t\t\t\t\t\t<li><a class=\"grey-text footer-thanks-item text-lighten-3\" target=\"_blank\" href=\"#\" onclick=\"return false;\">Materialize CSS (Framework used in this Theme)</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<a href=\"#\" onclick=\"alert('Error 404 - Gaming PC not found.'); return false;\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/Wu7ob8uuz/steam.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"alert('I\\'m not going to publish my phone number, although you may request it personally ;)'); return false\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/Pu5ob8uvq/whatsapp.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"alert('Sorry, but I really dislike Facebook.'); return false;\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/qcBob8ut4/facebook.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/Okpob90n3/go_ogle-plus_icon.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/Qqiob8uva/twitch.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/rJ3ob8uve/twitter.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/6Fcob8uuh/instagram.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/9Phob8uut/stackoverflow.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/wXMob8uu5/github.png\"/></a>\n\t\t\t\t\t\t<a href=\"#\" onclick=\"return false;\" target=\"_blank\"><img class=\"socialmedia-icon\" src=\"http://static.tumblr.com/642aqpc/tKzob90m3/tum_blr_icon.png\"/></a>\n\t\t\t\t\t</div>" : "";
+            string showquotescode = (ShowQuotes) ? "<script type=\"text/javascript\">\nvar setWeeklyQuote = function(){\n\tif (quotes.length != 0){\n\t\tvar now = new Date();\n\t\tvar onejan = new Date(now.getFullYear(), 0, 1);\n\t\tvar week = Math.ceil((((now - onejan) / 86400000) + onejan.getDay() + 1) / 7);\n\t\t\n\t\tcurrent_quote_index = week % quotes.length;\n\t\tdocument.getElementById(\"quote-text\").innerHTML = quotes[current_quote_index];\n\t}\n};\n\nvar setRandomQuote = function(){\n\tif (quotes.length != 0){\n\t\tdocument.getElementById(\"quote-caption\").innerHTML = \"Quote\";\n\t\tcurrent_quote_index = Math.floor(Math.random() * quotes.length);\n\t\tdocument.getElementById(\"quote-text\").innerHTML = quotes[current_quote_index];\n\t}\n};\n\nvar setNextQuote = function(){\n\tif (quotes.length != 0){\n\t\tdocument.getElementById(\"quote-caption\").innerHTML = \"Quote\";\n\t\tcurrent_quote_index = (current_quote_index + 1) % quotes.length;\n\t\tdocument.getElementById(\"quote-text\").innerHTML = quotes[current_quote_index];\n\t}\n};\n\nsetWeeklyQuote();\n\t\t</script>" : "";
 
             return String.Format(
                 ThemeText, 
@@ -295,7 +320,8 @@ setWeeklyQuote();
                 quotescontainer, //15
                 pagination, //16
                 endcaption, //17
-                showquotescode //18
+                respectingfooter, //18
+                showquotescode //19
             );
         }
 
@@ -325,7 +351,8 @@ setWeeklyQuote();
                 pref.getBoolean(PreferenceIDs.SHOW_QUOTES, DefaultValues.ShowQuotes),
                 pref.getString(PreferenceIDs.QUOTESJAVASCRIPTCODE, DefaultValues.QuotesJavaScriptCode),
                 pref.getBoolean(PreferenceIDs.INFINITESCROLLING, DefaultValues.InfiniteScrolling),
-                pref.getString(PreferenceIDs.CUSTOMCSS, DefaultValues.CustomCSS)
+                pref.getString(PreferenceIDs.CUSTOMCSS, DefaultValues.CustomCSS),
+                pref.getBoolean(PreferenceIDs.PAYRESPECTTOMYWORK, DefaultValues.PayRespectToMyWork)
             );
         }
 
@@ -353,7 +380,8 @@ setWeeklyQuote();
                 .putBoolean(PreferenceIDs.SHOW_QUOTES,          preview.ShowQuotes)
                 .putString(PreferenceIDs.QUOTESJAVASCRIPTCODE,  preview.QuotesJavaScriptCode)
                 .putBoolean(PreferenceIDs.INFINITESCROLLING,    preview.InfiniteScrolling)
-                .putString(PreferenceIDs.CUSTOMCSS,             preview.CustomCSS);
+                .putString(PreferenceIDs.CUSTOMCSS,             preview.CustomCSS)
+                .putBoolean(PreferenceIDs.PAYRESPECTTOMYWORK,   preview.PayRespectToMyWork);
         }
         #endregion
 
@@ -502,6 +530,8 @@ setWeeklyQuote();
 
             public static readonly bool InfiniteScrolling = true;
             public static readonly string CustomCSS = "";
+
+            public static readonly bool PayRespectToMyWork = true;
         }
 
         private static class PreferenceIDs
@@ -528,6 +558,7 @@ setWeeklyQuote();
             public static readonly string QUOTESJAVASCRIPTCODE = "The quotes of your testblog in javascript code ^^";
             public static readonly string INFINITESCROLLING = "Whether the posts of your testblog are supposed to be automatically loaded ^^";
             public static readonly string CUSTOMCSS = "The customizing css of your testblog ^^";
+            public static readonly string PAYRESPECTTOMYWORK = "Whether you want to pay respect to my hard work or not ^^";
         }
     }
 

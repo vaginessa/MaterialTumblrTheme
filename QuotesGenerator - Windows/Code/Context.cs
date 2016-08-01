@@ -99,16 +99,12 @@ namespace ContextNS
                 "Open in ext. Browser",
                 "Preview successfully generated.",
                 "Preview will open in your standard HTML-program. File has been cached in {0}.",
-
                 "Preview settings",
-
                 "Title",
                 "Description",
                 "Avatar shape",
-
                 "Circle",
                 "Rectangle",
-
                 "Background color",
                 "Change color",
                 "Show header image",
@@ -119,7 +115,6 @@ namespace ContextNS
                 "Second Background stripe color",
                 "Avatar border color",
                 "ThemeColor",
-
                 "Red",
                 "Purple",
                 "Deep Purple",
@@ -136,11 +131,11 @@ namespace ContextNS
                 "Orange",
                 "Deep Orange",
                 "Brown",
-                
                 "Endless scrolling",
                 "Sliding header",
                 "Background as stripes",
                 "Show quotes",
+                "Pay respect to my hard work",
             };
 
             public static readonly string[] de = {
@@ -188,16 +183,12 @@ namespace ContextNS
                 "In ext. Browser öffnen",
                 "Vorschau erfolgreich generiert.",
                 "Vorschau wird mit ihrem Standard-HTML-Programm geöffnet. Datei wurde in {0} zwischengespeichert.",
-
                 "Einstellungen für die Vorschau",
-
                 "Titel",
                 "Beschreibung",
                 "Avatarform",
-
                 "Kreis",
                 "Rechteck",
-
                 "Hintergrundfarbe",
                 "Farbe auswählen",
                 "Headerbild zeigen",
@@ -208,7 +199,6 @@ namespace ContextNS
                 "Farbe des zweiten Hintergrundstreifens",
                 "Rahmenfarbe des Avatars",
                 "Themefarbe",
-
                 "Rot",
                 "Lila",
                 "Dunkellila",
@@ -225,11 +215,11 @@ namespace ContextNS
                 "Orange",
                 "Dunkelorange",
                 "Braun",
-                
                 "Endloses Scrollen",
                 "Mitgleitendes Headerbild",
                 "Hintergrund als Streifen",
                 "Zitate zeigen",
+                "Meiner harten Arbeit Respekt zollen",
             };
         }
     }
@@ -280,16 +270,12 @@ namespace ContextNS
         public static readonly int PREVIEW_OPENINEXTBROWSER                         = 41;
         public static readonly int SUCCESS_PREVIEW_GENERATE                         = 42;
         public static readonly int SUCCESS_PREVIEW_OPENINEXTBROWSER                 = 43;
-
         public static readonly int PREVIEW_SETTINGS_CAPTION                         = 44;
-
         public static readonly int PREVIEW_SETTINGS_TITLE                           = 45;
         public static readonly int PREVIEW_SETTINGS_DESCRIPTION                     = 46;
         public static readonly int PREVIEW_SETTINGS_AVATARSHAPE                     = 47;
-
         public static readonly int PREVIEW_SETTINGS_IMAGESHAPE_CIRCLE               = 48;
         public static readonly int PREVIEW_SETTINGS_IMAGESHAPE_RECTANGLE            = 49;
-
         public static readonly int PREVIEW_SETTINGS_BACKGROUNDCOLOR                 = 50;
         public static readonly int PREVIEW_SETTINGS_CHANGECOLOR                     = 51;
         public static readonly int PREVIEW_SETTINGS_SHOWHEADERIMAGE                 = 52;
@@ -300,7 +286,6 @@ namespace ContextNS
         public static readonly int PREVIEW_SETTINGS_SECONDSTRIPECOLOR               = 57;
         public static readonly int PREVIEW_SETTINGS_AVATARBORDERCOLOR               = 58;
         public static readonly int PREVIEW_SETTINGS_THEMECOLOR                      = 59;
-
         public static readonly int PREVIEW_SETTINGS_MATERIALCOLOR_RED               = 60;
         public static readonly int PREVIEW_SETTINGS_MATERIALCOLOR_PURPLE            = 61;
         public static readonly int PREVIEW_SETTINGS_MATERIALCOLOR_DEEPPURPLE        = 62;
@@ -317,10 +302,10 @@ namespace ContextNS
         public static readonly int PREVIEW_SETTINGS_MATERIALCOLOR_ORANGE            = 73;
         public static readonly int PREVIEW_SETTINGS_MATERIALCOLOR_DEEPORANGE        = 74;
         public static readonly int PREVIEW_SETTINGS_MATERIALCOLOR_BROWN             = 75;
-
         public static readonly int PREVIEW_SETTINGS_ENDLESSSCROLLING                = 76;
         public static readonly int PREVIEW_SETTINGS_SLIDINGHEADER                   = 77;
         public static readonly int PREVIEW_SETTINGS_BACKGROUNDSTRIPES               = 78;
         public static readonly int PREVIEW_SETTINGS_SHOWQUOTES                      = 79;
+        public static readonly int PREVIEW_SETTINGS_PAYRESPECTTOMYWORK              = 80;
     }
 }

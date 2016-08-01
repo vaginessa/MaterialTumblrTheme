@@ -90,12 +90,10 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.ListViewHeaderQuote.Text = Context.getString(ContextIDs.QUOTES_LISTVIEWCAPTION_QUOTES);
             this.ListViewHeaderArtist.Text = Context.getString(ContextIDs.QUOTES_LISTVIEWCAPTION_ARTIST);
             this.ListViewHeaderSong.Text = Context.getString(ContextIDs.QUOTES_LISTVIEWCAPTION_SONG);
-
             this.PreviewTabPage.Text = Context.getString(ContextIDs.TABCAPTIONS_PREVIEW);
             this.PreviewToolStripMenuItem.Text = Context.getString(ContextIDs.TABCAPTIONS_PREVIEW);
             this.GeneratePreviewToolStripMenuItem.Text = Context.getString(ContextIDs.PREVIEW_GENERATE);
             this.OpenInExtBrowserToolStripMenuItem.Text = Context.getString(ContextIDs.PREVIEW_OPENINEXTBROWSER);
-
             this.PreviewSettingsTabPage.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_CAPTION);
             this.PreviewSettingsTitleLabel.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_TITLE);
             this.PreviewSettingsDescriptionLabel.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_DESCRIPTION);
@@ -139,10 +137,16 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.PreviewSettingsSlidingHeaderCheckBox.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_SLIDINGHEADER);
             this.PreviewSettingsBackgroundStripesCheckBox.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_BACKGROUNDSTRIPES);
             this.PreviewSettingsShowQuotesCheckBox.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_SHOWQUOTES);
+            this.PayRespectToMyWorkCheckBox.Text = Context.getString(ContextIDs.PREVIEW_SETTINGS_PAYRESPECTTOMYWORK);
         }
         #endregion
 
         #region EventHandlers
+        private void PayRespectToMyWorkCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Preview.PayRespectToMyWork = PayRespectToMyWorkCheckBox.Checked;
+        }
+
         private void PreviewSettingsTitleTextBox_TextChanged(object sender, EventArgs e)
         {
             Preview.Title = PreviewSettingsTitleTextBox.Text;
@@ -591,6 +595,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             PreviewSettingsSlidingHeaderCheckBox.Checked = Preview.SlidingHeader;
             PreviewSettingsBackgroundStripesCheckBox.Checked = Preview.BackgroundAsStripes;
             PreviewSettingsShowQuotesCheckBox.Checked = Preview.ShowQuotes;
+            PayRespectToMyWorkCheckBox.Checked = Preview.PayRespectToMyWork;
         }
 
         private ImageShape GetAvatarShape()

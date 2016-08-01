@@ -109,6 +109,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.PreviewSettingsTitleTextBox = new System.Windows.Forms.TextBox();
             this.PreviewSettingsTitleLabel = new System.Windows.Forms.Label();
             this.PreviewSettingsColorDialog = new System.Windows.Forms.ColorDialog();
+            this.PayRespectToMyWorkCheckBox = new System.Windows.Forms.CheckBox();
             this.MenuStrip1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
             this.TabPage2.SuspendLayout();
@@ -487,6 +488,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.PayRespectToMyWorkCheckBox);
             this.panel1.Controls.Add(this.PreviewSettingsShowQuotesCheckBox);
             this.panel1.Controls.Add(this.PreviewSettingsBackgroundStripesCheckBox);
             this.panel1.Controls.Add(this.PreviewSettingsSlidingHeaderCheckBox);
@@ -799,6 +801,17 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.PreviewSettingsTitleLabel.TabIndex = 0;
             this.PreviewSettingsTitleLabel.Text = "Title";
             // 
+            // PayRespectToMyWorkCheckBox
+            // 
+            this.PayRespectToMyWorkCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PayRespectToMyWorkCheckBox.Location = new System.Drawing.Point(9, 416);
+            this.PayRespectToMyWorkCheckBox.Name = "PayRespectToMyWorkCheckBox";
+            this.PayRespectToMyWorkCheckBox.Size = new System.Drawing.Size(959, 24);
+            this.PayRespectToMyWorkCheckBox.TabIndex = 24;
+            this.PayRespectToMyWorkCheckBox.Text = "Pay respect to my hard work";
+            this.PayRespectToMyWorkCheckBox.UseVisualStyleBackColor = true;
+            this.PayRespectToMyWorkCheckBox.CheckedChanged += new System.EventHandler(this.PayRespectToMyWorkCheckBox_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -897,6 +910,7 @@ namespace TumblrMaterialThemeQuotesGenerator
         private System.Windows.Forms.CheckBox PreviewSettingsSlidingHeaderCheckBox;
         private System.Windows.Forms.CheckBox PreviewSettingsBackgroundStripesCheckBox;
         private System.Windows.Forms.CheckBox PreviewSettingsShowQuotesCheckBox;
+        private System.Windows.Forms.CheckBox PayRespectToMyWorkCheckBox;
     }
 }
 

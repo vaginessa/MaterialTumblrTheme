@@ -158,6 +158,10 @@ limitations under the License.
 .material-icons{{
 	color: white;
 }}
+.socialmedia-icon{{
+	width: 24px;
+	float: right;
+}}
 
 /* Enable custom css, because it's nice to customize */
 {10}
@@ -441,20 +445,7 @@ andprobablymylastughhsohard
                 <footer class="page-footer {11}" id="footer">
                     <div class="container">
 						{17}
-                        <div class="row">
-                            <div class="col l5 s12">
-                                <h5 class="white-text">Theme by Jean-Pierre Hotz</h5>
-                                <p class="grey-text text-lighten-4">You can use this theme if you like.<br>It'll just cost you the effort of copy & pasting it :P</p>
-                            </div>
-                            <div class="col l6 offset-l1 s12">
-                                <h5 class="white-text">Thanks to:</h5>
-                                <ul>
-                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Tumblr. for giving me inspiration and room to be creative</a></li>
-                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Myself for being so patient with the infinite scrolling feature.</a></li>
-                                    <li><a class="grey-text footer-thanks-item text-lighten-3" target="_blank" href="#" onclick="return false;">Materialize CSS (Framework used in this Theme)</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        {18}
                     </div>
                     <div class="footer-copyright">
                         <div class="container">
@@ -474,6 +465,6 @@ andprobablymylastughhsohard
   }});
 }})(jQuery);
         </script>
-		{18}
+		{19}
     </body>
 </html>

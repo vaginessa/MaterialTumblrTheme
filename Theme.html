@@ -1,18 +1,17 @@
 <!DOCTYPE HTML>
 <!-- 
-   		Copyright 2016 Jean-Pierre Hotz
+    Copyright 2016 Jean-Pierre Hotz
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
 
-        http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 <html>
 	<head>
@@ -46,6 +45,7 @@
         <meta name="select:ThemeColor" content="orange" title="Orange">
         <meta name="select:ThemeColor" content="deep-orange" title="Deep Orange">
         <meta name="select:ThemeColor" content="brown" title="Brown">
+        <meta name="if:Pay respect to my hard work" content="1">
         {/block:Hidden}
     	<!--Import Google Icon Font-->
     	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -204,6 +204,10 @@ var quotes = [
 }
 .footer-thanks-item:hover{
     text-decoration: underline;
+}
+.socialmedia-icon{
+    width: 24px;
+    float: right;
 }
 
 /* Enable custom css, because it's nice to customize */
@@ -412,7 +416,7 @@ var quotes = [
                         {block:IfEndlessScrolling}<div class="row center">
                             <h3 class="grey-text text-lighten-4">This seems to be it with this blog.</h3>
                         </div>{/block:IfEndlessScrolling}
-                        <div class="row">
+                        {block:IfPayRespectToMyHardWork}<div class="row">
                             <div class="col l5 s12">
                                 <h5 class="white-text">Theme by Jean-Pierre Hotz</h5>
                                 <p class="grey-text text-lighten-4">You can use this theme if you like.<br>It'll just cost you the effort of copy & pasting it :P</p>
@@ -426,6 +430,18 @@ var quotes = [
                                 </ul>
                             </div>
                         </div>
+                        <div class="row">
+                            <a href="#" onclick="alert('Error 404 - Gaming PC not found.'); return false;"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Wu7ob8uuz/steam.png"/></a>
+                            <a href="#" onclick="alert('I\'m not going to publish my phone number, although you may request it personally ;)'); return false"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Pu5ob8uvq/whatsapp.png"/></a>
+                            <a href="#" onclick="alert('Sorry, but I really dislike Facebook.'); return false;"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/qcBob8ut4/facebook.png"/></a>
+                            <a href="https://plus.google.com/u/0/114813713589155713629/posts" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Okpob90n3/go_ogle-plus_icon.png"/></a>
+                            <a href="https://www.twitch.tv/sirjonny1998/profile" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/Qqiob8uva/twitch.png"/></a>
+                            <a href="https://twitter.com/HotzJean" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/rJ3ob8uve/twitter.png"/></a>
+                            <a href="https://www.instagram.com/jonny9298/" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/6Fcob8uuh/instagram.png"/></a>
+                            <a href="http://stackoverflow.com/users/6665105/jonny9298" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/9Phob8uut/stackoverflow.png"/></a>
+                            <a href="https://github.com/JP1998" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/wXMob8uu5/github.png"/></a>
+                            <a href="http://bitchyprincefun.tumblr.com/" target="_blank"><img class="socialmedia-icon" src="http://static.tumblr.com/642aqpc/tKzob90m3/tum_blr_icon.png"/></a>
+                        </div>{/block:IfPayRespectToMyHardWork}
                     </div>
                     <div class="footer-copyright">
                         <div class="container">
