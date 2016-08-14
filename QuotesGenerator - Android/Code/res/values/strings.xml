@@ -1,0 +1,145 @@
+<!--
+/*
+ *      Copyright 2016 Jean-Pierre Hotz
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ *        .o                                .o88       .o88
+ *       .88                                "888       "888
+ *      o8888oo  ooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b
+ *      ""888""  888  "888  "888P"Y88bP"Y88b  d88' `88b  888  "888""8P
+ *        888    888   888   888   888   888  888   888  888   888
+ *        888 .  888   888   888   888   888  888.  888  888   888    .o.
+ *        "888Y  `V88V"V8P' o888o o888o o888o 88`bod8P' o888o d888b   Y8P
+ *
+ */
+-->
+<resources>
+    <string name="app_name" translatable="false">Tumblr\nMaterial Theme</string>
+
+    <!-- Tab captions -->
+    <string name="tab_caption_quotes">Quotes</string>
+    <string name="tab_caption_code">Code</string>
+    <string name="tab_caption_preview">Preview</string>
+    <string name="tab_caption_settings">Settings</string>
+
+    <!-- Context Menu Item texts -->
+    <string name="menu_fragment_quotes_add">Add quote</string>
+    <string name="menu_fragment_quotes_shuffle">Shuffle quotes</string>
+    <string name="menu_fragment_quotes_loadfromfile">Load from file</string>
+    <string name="menu_fragment_quotes_writetofile">Write to file</string>
+    <string name="menu_fragment_code_generate">Generate code</string>
+    <string name="menu_fragment_preview_generate">Generate Preview</string>
+
+    <!-- Preferences codes -->
+    <string name="preferences_code_quotes" translatable="false">mQuotes = Quote.loadFromSharedPreferences(getSharedPreferences(getString(R.string.preferences_code_quotes), MODE_PRIVATE));</string>
+    <string name="preferences_preview" translatable="false">mHTMLPreviewGenerator = new HTMLPreviewGenerator(getSharedPreferences(getString(R.string.preferences_preview), MODE_PRIVATE));</string>
+
+
+    <!--
+        Strings for the settings:
+    -->
+
+    <!-- Avatar Shapes -->
+    <string name="avatarshape_rect">Rectangle</string>
+    <string name="avatarshape_circ">Circle</string>
+
+    <!-- Theme colors -->
+    <string name="themecolor_red">Red</string>
+    <string name="themecolor_purple">Purple</string>
+    <string name="themecolor_deeppurple">Deep Purple</string>
+    <string name="themecolor_indigoblue">Indigo Blue</string>
+    <string name="themecolor_blue">Blue</string>
+    <string name="themecolor_lightblue">Light Blue</string>
+    <string name="themecolor_cyan">Cyan</string>
+    <string name="themecolor_teal">Teal</string>
+    <string name="themecolor_green">Green</string>
+    <string name="themecolor_lightgreen">Light Green</string>
+    <string name="themecolor_lime">Lime</string>
+    <string name="themecolor_yellow">Yellow</string>
+    <string name="themecolor_amber">Amber</string>
+    <string name="themecolor_orange">Orange</string>
+    <string name="themecolor_deeporange">Deep Orange</string>
+    <string name="themecolor_brown">Brown</string>
+
+    <!-- Fileselector error texts -->
+    <string name="fileselector_error_write">Error while writing quotes.</string>
+    <string name="fileselector_error_load">Error while loading quotes.</string>
+
+    <!-- Preview -->
+    <string name="preview_default_nopreview">No preview to show.</string>
+    <string name="preview_default_generatedescription"><![CDATA[You should create one by clicking on &quot;Generate Preview&quot; in the app\'s context menu.]]></string>
+
+    <!-- Quotes -->
+    <string name="quotes_onclick_selectaction">Select action</string>
+    <string name="quotes_add_caption">Add a quote</string>
+    <string name="quotes_change_caption">Change quote</string>
+    <string name="error_missingvalue">You have to give a value for everything!</string>
+    <string name="dialog_change">Change</string>
+    <string name="dialog_add">Add</string>
+    <string name="dialog_abort">Abort</string>
+    <string name="dialog_quote_artisthint">Artist</string>
+    <string name="dialog_quote_songhint">Song</string>
+    <string name="dialog_quote_quotehint">Quote</string>
+    <string name="emptylist_top_caption">Well… That\'s shit.</string>
+    <string name="emptylist_bottom_caption">You don\'t have any quotes.\nAdd one by clicking on the \"Add quote\" button in the context menu.</string>
+
+    <string name="quotes_onclick_actions_change">Change</string>
+    <string name="quotes_onclick_actions_delete">Delete</string>
+
+    <!-- Codes -->
+    <string name="fragment_code_emptycodefieldhint">Here you will be able to copy your generated code from.</string>
+
+    <!-- Settings -->
+    <string name="settings_hint_title">Title</string>
+    <string name="settings_hint_description">Description</string>
+    <string name="settings_hint_avatarshape">Avatar Shape:</string>
+    <string name="settings_hint_backgroundcolor">Background color</string>
+    <string name="settings_hint_showheaderimage">Show header image</string>
+    <string name="settings_hint_showavatar">Show avatar</string>
+    <string name="settings_hint_showtitle">Show title</string>
+    <string name="settings_hint_showdescription">Show description</string>
+    <string name="settings_hint_firstbackgroundstripecolor">First Background stripe color</string>
+    <string name="settings_hint_secondbackgroundstripecolor">Second Background stripe color</string>
+    <string name="settings_hint_avatarbordercolor">Avatar border color</string>
+    <string name="settings_hint_themecolor">ThemeColor:</string>
+    <string name="settings_hint_endlessscrolling">Endless scrolling</string>
+    <string name="settings_hint_slidingheader">Sliding header</string>
+    <string name="settings_hint_backgroundasstripes">Background as stripes</string>
+    <string name="settings_hint_showquotes">Show Quotes</string>
+    <string name="settings_hint_payrespecttomyhardwork">Pay respect to my hard work</string>
+
+    <!-- Project aFileDialog -->
+    <string name="daidalos_hello">Hello World!</string>
+    <string name="daidalos_app_name" translatable="false">aFileDialog</string>
+    <color name="daidalos_gray">#888888</color>
+    <string name="daidalos_select">Select</string>
+    <string name="daidalos_cancel">Cancel</string>
+    <string name="daidalos_ok">OK</string>
+    <string name="daidalos_new_file">New</string>
+    <string name="daidalos_create_file">Create file</string>
+    <string name="daidalos_create_folder">Create folder</string>
+    <string name="daidalos_accept">Accept</string>
+    <string name="daidalos_enter_file_name">Enter the name of the file that you want to create</string>
+    <string name="daidalos_enter_folder_name">Enter the name of the folder that you want to create</string>
+    <string name="daidalos_yes">Yes</string>
+    <string name="daidalos_no">No</string>
+    <string name="daidalos_confirm_select_file">Are you sure that you want to select the file \'$file_name\'?</string>
+    <string name="daidalos_confirm_create_file">The file \'$file_name\' does not exists, are you sure that you want to create it?</string>
+    <string name="daidalos_confirm_select_folder">Are you sure that you want to select the folder \'$file_name\'?</string>
+    <string name="daidalos_confirm_create_folder">The folder \'$file_name\' does not exists, are you sure that you want to create it?</string>
+    <color name="daidalos_backgroud">#ffffff</color>
+    <color name="daidalos_active_file">#000000</color>
+    <color name="daidalos_inactive_file">#888888</color>
+
+</resources>
