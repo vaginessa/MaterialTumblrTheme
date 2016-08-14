@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ *      Copyright 2016 Jean-Pierre Hotz
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ *        .o                                .o88       .o88
+ *       .88                                "888       "888
+ *      o8888oo  ooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b
+ *      ""888""  888  "888  "888P"Y88bP"Y88b  d88' `88b  888  "888""8P
+ *        888    888   888   888   888   888  888   888  888   888
+ *        888 .  888   888   888   888   888  888.  888  888   888    .o.
+ *        "888Y  `V88V"V8P' o888o o888o o888o 88`bod8P' o888o d888b   Y8P
+ *
+ */
+-->
+<resources>
+
+    <!-- Tab captions -->
+    <string name="tab_caption_quotes">Zitate</string>
+    <string name="tab_caption_code">Code</string>
+    <string name="tab_caption_preview">Vorschau</string>
+    <string name="tab_caption_settings">Einstellungen</string>
+
+    <!-- Context Menu Item texts -->
+    <string name="menu_fragment_quotes_add">Zitat hinzufügen</string>
+    <string name="menu_fragment_quotes_shuffle">Zitate mischen</string>
+    <string name="menu_fragment_quotes_loadfromfile">Von Datei laden</string>
+    <string name="menu_fragment_quotes_writetofile">In Datei speichern</string>
+    <string name="menu_fragment_code_generate">Code generieren</string>
+    <string name="menu_fragment_preview_generate">Vorschau generieren</string>
+
+
+
+
+
+
+    <!--
+        Strings for the settings:
+    -->
+
+    <!-- Avatar Shapes -->
+    <string name="avatarshape_rect">Rechteck</string>
+    <string name="avatarshape_circ">Kreis</string>
+
+    <!-- Theme colors -->
+    <string name="themecolor_red">Rot</string>
+    <string name="themecolor_purple">Lila</string>
+    <string name="themecolor_deeppurple">Dunkellila</string>
+    <string name="themecolor_indigoblue">Indigo Blau</string>
+    <string name="themecolor_blue">Blau</string>
+    <string name="themecolor_lightblue">Hellblau</string>
+    <string name="themecolor_cyan">Cyanblau</string>
+    <string name="themecolor_teal">Blau-Grün</string>
+    <string name="themecolor_green">Grün</string>
+    <string name="themecolor_lightgreen">Hellgrün</string>
+    <string name="themecolor_lime">Hellgrün (Lime)</string>
+    <string name="themecolor_yellow">Gelb</string>
+    <string name="themecolor_amber">Bernstein</string>
+    <string name="themecolor_orange">Orange</string>
+    <string name="themecolor_deeporange">Dunkelorange</string>
+    <string name="themecolor_brown">Braun</string>
+
+    <!-- Fileselector error texts -->
+    <string name="fileselector_error_write">Fehler beim Speichern der Zitate.</string>
+    <string name="fileselector_error_load">Fehler beim Laden der Zitate.</string>
+
+    <!-- Preview -->
+    <string name="preview_default_nopreview">Keine Vorschau, die gezeigt werden könnte.</string>
+    <string name="preview_default_generatedescription"><![CDATA[Sie sollten eine Vorschau erstellen, indem Sie auf den &quot;Vorschau generieren&quot; - Knopf in dem Kontextmenü drücken.]]></string>
+
+    <!-- Quotes -->
+    <string name="quotes_onclick_selectaction">Aktion auswählen</string>
+    <string name="quotes_add_caption">Zitat hinzufügen</string>
+    <string name="quotes_change_caption">Zitat verändern</string>
+    <string name="error_missingvalue">Sie müssen für alles einen Wert angeben!</string>
+    <string name="dialog_change">Verändern</string>
+    <string name="dialog_add">Hinzufügen</string>
+    <string name="dialog_abort">Abbrechen</string>
+    <string name="dialog_quote_artisthint">Artist</string>
+    <string name="dialog_quote_songhint">Lied</string>
+    <string name="dialog_quote_quotehint">Zitat</string>
+    <string name="emptylist_top_caption">Na… Das ist Kacke.</string>
+    <string name="emptylist_bottom_caption">Sie haben keine Zitate.\nFügen Sie eins hinzu, indem sie den \"Zitat hinzufügen\" - Knopf im Kontextmenü drücken</string>
+
+    <string name="quotes_onclick_actions_change">Verändern</string>
+    <string name="quotes_onclick_actions_delete">Löschen</string>
+
+    <!-- Codes -->
+    <string name="fragment_code_emptycodefieldhint">Von hier können Sie ihren generierten Code kopieren.</string>
+
+    <!-- Settings -->
+    <string name="settings_hint_title">Titel</string>
+    <string name="settings_hint_description">Beschreibung</string>
+    <string name="settings_hint_avatarshape">Avatarform:</string>
+    <string name="settings_hint_backgroundcolor">Hintergrundfarbe</string>
+    <string name="settings_hint_showheaderimage">Zeige Header-Bild</string>
+    <string name="settings_hint_showavatar">Avatar zeigen</string>
+    <string name="settings_hint_showtitle">Zeige Titel</string>
+    <string name="settings_hint_showdescription">Beschreibung zeigen</string>
+    <string name="settings_hint_firstbackgroundstripecolor">Farbe des ersten Hintergrundstreifens</string>
+    <string name="settings_hint_secondbackgroundstripecolor">Farbe des zweiten Hintergrundstreifens</string>
+    <string name="settings_hint_avatarbordercolor">Avatars Rahmenfarbe</string>
+    <string name="settings_hint_themecolor">Themefarbe:</string>
+    <string name="settings_hint_endlessscrolling">Endloses Scrollen</string>
+    <string name="settings_hint_slidingheader">Mitgleitendes Headerbild</string>
+    <string name="settings_hint_backgroundasstripes">Hintergrund als Streifen</string>
+    <string name="settings_hint_showquotes">Zeige Zitate</string>
+    <string name="settings_hint_payrespecttomyhardwork">Meiner harten Arbeit Respekt zollen</string>
+
+    <!-- Project aFileDialog -->
+    <string name="daidalos_hello">Hallo Welt!</string>
+
+
+    <string name="daidalos_select">Auswählen</string>
+    <string name="daidalos_cancel">Abbrechen</string>
+    <string name="daidalos_ok">OK</string>
+    <string name="daidalos_new_file">Neu</string>
+    <string name="daidalos_create_file">Datei erstellen</string>
+    <string name="daidalos_create_folder">Ordner erstellen</string>
+    <string name="daidalos_accept">Akzeptieren</string>
+    <string name="daidalos_enter_file_name">Geben Sie den Namen der Datei, die Sie erstellen möchten, ein</string>
+    <string name="daidalos_enter_folder_name">Geben Sie den Namen des Ordners, den Sie erstellen möchten, ein</string>
+    <string name="daidalos_yes">Ja</string>
+    <string name="daidalos_no">Nein</string>
+    <string name="daidalos_confirm_select_file">Sind Sie sicher, dass Sie die Datei \'$file_name\' auswählen möchten?</string>
+    <string name="daidalos_confirm_create_file">Die Datei \'$file_name\' existiert nicht. Möchten Sie diese erstellen?</string>
+    <string name="daidalos_confirm_select_folder">Sind Sie sicher, dass Sie den Ordner \'$file_name\' auswählen möchten?</string>
+    <string name="daidalos_confirm_create_folder">Der Ordner \'$file_name\' existiert nicht. Möchten Sie ihn erstellen?</string>
+
+
+
+
+</resources>
