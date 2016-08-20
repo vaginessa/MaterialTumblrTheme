@@ -74,7 +74,14 @@ public class QuotesXMLParser {
                 }
             }
 
-            Token[] valueranges = Token.getTokensInside(contents)[0].getTokensInside();//                load the single datatype-trees in the root-tag
+            Token prefToken = Token.getTokensInside(contents)[0];//              we get the global parent
+            String mName = prefToken.getAttribute("name");//                           whose name-attribute should equal the filename
+
+            if(!filename.equals(mName)){
+                throw new IOException("The file name may not be modified!");
+            }
+
+            Token[] valueranges = prefToken.getTokensInside();//                load the single datatype-trees in the root-tag
 
             Token[][] values = new Token[valueranges.length][];
             for(int i = 0; i < valueranges.length; i++){
@@ -114,7 +121,13 @@ public class QuotesXMLParser {
     }
 
     public static void writeQuotes(ArrayList<Quote> quotes, String filepath) throws IOException {
-        String content = "<preference name =\"" + findName(filepath) + "\">\n\n";
+        String content = "<!--\r\n" +
+                "    DO NOT MODIFY THIS FILE OR ITS FILENAME!\r\n" +
+                "    IT WILL NOT BE GUARANTEED TO BE USABLE WITH THE FOR THIS FILE AWAITED ALGORITHM ANYMORE!\r\n" +
+                " \r\n" +
+                "    Copyright 2016 Jean-Pierre Hotz\r\n" +
+                "-->\r\n" +
+                "<preference name=\"" + findName(filepath) + "\">\n\n";
 
         content += "\t<boolean_vals>\n\n";
         content += "\n\t</boolean_vals>\n\n";
@@ -123,8 +136,7 @@ public class QuotesXMLParser {
         content += "\n\t</char_vals>\n\n";
 
         content += "\t<string_vals>\n\n";
-        for (int i = 0; i < quotes.size(); i++)
-        {
+        for (int i = 0; i < quotes.size(); i++) {
             content += "\t\t<value key=\"" + IDs.QUOTE_AT + i + "\">" + quotes.get(i).getQuote() + "</value>\n";
             content += "\t\t<value key=\"" + IDs.ARTIST_AT + i + "\">" + quotes.get(i).getArtist() + "</value>\n";
             content += "\t\t<value key=\"" + IDs.SONG_AT + i + "\">" + quotes.get(i).getSong() + "</value>\n";
@@ -226,6 +238,23 @@ public class QuotesXMLParser {
          * @return all tokens on the top-level of the given text
          */
         public static Token[] getTokensInside(String tokenize){
+
+            // remove all the comments inside the xml-files
+            int com_beg = 0;
+            int com_end = 0;
+
+            for(int i = 0; i < tokenize.length(); i++) {
+                if(tokenize.substring(i).startsWith("<!--")) {
+                    com_beg = i;
+                    com_end = i;
+
+                    while(!tokenize.substring(0, com_end).endsWith("-->")) com_end++;
+
+                    tokenize = tokenize.substring(0, com_beg) + tokenize.substring(com_end);
+                }
+            }
+
+
             ArrayList<Token> tokens = new ArrayList<>();
 
             int beg = 0;
