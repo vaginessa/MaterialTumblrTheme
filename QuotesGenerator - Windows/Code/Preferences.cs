@@ -400,7 +400,13 @@ namespace TumblrMaterialThemeQuotesGenerator
 
             private void writeToFile()
             {
-                string content = "<preference name=\"" + parent.mName + "\">\n\n";
+                string content = "<!--\r\n" +
+                    "    DO NOT MODIFY THIS FILE OR ITS FILENAME!\r\n" +
+                    "    IT WILL NOT BE GUARANTEED TO BE USABLE WITH THE FOR THIS FILE AWAITED ALGORITHM ANYMORE!\r\n" +
+                    " \r\n" +
+                    "    Copyright 2016 Jean-Pierre Hotz\r\n" +
+                    "-->\r\n" +
+                    "<preference name=\"" + parent.mName + "\">\n\n";
 
                 content += "\t<boolean_vals>\n\n";
                 foreach (string key in mTempBooleanValues.Keys)
@@ -489,6 +495,25 @@ namespace TumblrMaterialThemeQuotesGenerator
 
             public static Token[] getTokensInside(string tokenize)
             {
+
+                // remove all the comments inside the xml-files
+                int com_beg = 0;
+                int com_end = 0;
+
+                for (int i = 0; i < tokenize.Length; i++)
+                {
+                    if (tokenize.Substring(i).StartsWith("<!--"))
+                    {
+                        com_beg = i;
+                        com_end = i;
+
+                        while (!tokenize.Substring(0, com_end).EndsWith("-->")) com_end++;
+
+                        tokenize = tokenize.Substring(0, com_beg) + tokenize.Substring(com_end);
+                    }
+                }
+
+
                 List<Token> tokens = new List<Token>();
 
                 int beg = 0;
