@@ -84,6 +84,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.webView1 = new EO.WebBrowser.WebView();
             this.PreviewSettingsTabPage = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PayRespectToMyWorkCheckBox = new System.Windows.Forms.CheckBox();
             this.PreviewSettingsShowQuotesCheckBox = new System.Windows.Forms.CheckBox();
             this.PreviewSettingsBackgroundStripesCheckBox = new System.Windows.Forms.CheckBox();
             this.PreviewSettingsSlidingHeaderCheckBox = new System.Windows.Forms.CheckBox();
@@ -109,7 +110,6 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.PreviewSettingsTitleTextBox = new System.Windows.Forms.TextBox();
             this.PreviewSettingsTitleLabel = new System.Windows.Forms.Label();
             this.PreviewSettingsColorDialog = new System.Windows.Forms.ColorDialog();
-            this.PayRespectToMyWorkCheckBox = new System.Windows.Forms.CheckBox();
             this.MenuStrip1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
             this.TabPage2.SuspendLayout();
@@ -248,6 +248,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             // TabPage2
             // 
+            this.TabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.TabPage2.Controls.Add(this.GeneratedCodeBox);
             this.TabPage2.Location = new System.Drawing.Point(4, 22);
             this.TabPage2.Name = "TabPage2";
@@ -255,13 +256,13 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.TabPage2.Size = new System.Drawing.Size(974, 446);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "Code";
-            this.TabPage2.UseVisualStyleBackColor = true;
             // 
             // GeneratedCodeBox
             // 
             this.GeneratedCodeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GeneratedCodeBox.BackColor = System.Drawing.SystemColors.Window;
             this.GeneratedCodeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GeneratedCodeBox.Location = new System.Drawing.Point(6, 6);
             this.GeneratedCodeBox.Name = "GeneratedCodeBox";
@@ -272,6 +273,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             // TabPage1
             // 
+            this.TabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.TabPage1.Controls.Add(this.MixQuotesButton);
             this.TabPage1.Controls.Add(this.DeleteSelectedQuoteButton);
             this.TabPage1.Controls.Add(this.ChangeSelectedQuoteButton);
@@ -289,7 +291,6 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.TabPage1.Size = new System.Drawing.Size(974, 446);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Quotes";
-            this.TabPage1.UseVisualStyleBackColor = true;
             // 
             // MixQuotesButton
             // 
@@ -353,6 +354,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.SongTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.SongTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.SongTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SongTextBox.Location = new System.Drawing.Point(87, 391);
             this.SongTextBox.Name = "SongTextBox";
@@ -363,6 +365,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.ArtistTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArtistTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.ArtistTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ArtistTextBox.Location = new System.Drawing.Point(87, 365);
             this.ArtistTextBox.Name = "ArtistTextBox";
@@ -373,6 +376,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.QuoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.QuoteTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.QuoteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.QuoteTextBox.Location = new System.Drawing.Point(87, 308);
             this.QuoteTextBox.Multiline = true;
@@ -405,6 +409,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.QuotesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.QuotesList.BackColor = System.Drawing.SystemColors.Window;
             this.QuotesList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.QuotesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ListViewHeaderQuote,
@@ -451,6 +456,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             // PreviewTabPage
             // 
+            this.PreviewTabPage.BackColor = System.Drawing.SystemColors.Control;
             this.PreviewTabPage.Controls.Add(this.PreviewWebControl);
             this.PreviewTabPage.Location = new System.Drawing.Point(4, 22);
             this.PreviewTabPage.Name = "PreviewTabPage";
@@ -458,11 +464,10 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.PreviewTabPage.Size = new System.Drawing.Size(974, 446);
             this.PreviewTabPage.TabIndex = 2;
             this.PreviewTabPage.Text = "Preview";
-            this.PreviewTabPage.UseVisualStyleBackColor = true;
             // 
             // PreviewWebControl
             // 
-            this.PreviewWebControl.BackColor = System.Drawing.Color.White;
+            this.PreviewWebControl.BackColor = System.Drawing.SystemColors.Control;
             this.PreviewWebControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PreviewWebControl.Location = new System.Drawing.Point(3, 3);
             this.PreviewWebControl.Name = "PreviewWebControl";
@@ -488,6 +493,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.PayRespectToMyWorkCheckBox);
             this.panel1.Controls.Add(this.PreviewSettingsShowQuotesCheckBox);
             this.panel1.Controls.Add(this.PreviewSettingsBackgroundStripesCheckBox);
@@ -518,6 +524,17 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(974, 446);
             this.panel1.TabIndex = 0;
+            // 
+            // PayRespectToMyWorkCheckBox
+            // 
+            this.PayRespectToMyWorkCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PayRespectToMyWorkCheckBox.Location = new System.Drawing.Point(9, 416);
+            this.PayRespectToMyWorkCheckBox.Name = "PayRespectToMyWorkCheckBox";
+            this.PayRespectToMyWorkCheckBox.Size = new System.Drawing.Size(959, 24);
+            this.PayRespectToMyWorkCheckBox.TabIndex = 24;
+            this.PayRespectToMyWorkCheckBox.Text = "Pay respect to my hard work";
+            this.PayRespectToMyWorkCheckBox.UseVisualStyleBackColor = true;
+            this.PayRespectToMyWorkCheckBox.CheckedChanged += new System.EventHandler(this.PayRespectToMyWorkCheckBox_CheckedChanged);
             // 
             // PreviewSettingsShowQuotesCheckBox
             // 
@@ -575,6 +592,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.PreviewSettingsThemeColorComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviewSettingsThemeColorComboBox.BackColor = System.Drawing.SystemColors.Window;
             this.PreviewSettingsThemeColorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PreviewSettingsThemeColorComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PreviewSettingsThemeColorComboBox.FormattingEnabled = true;
@@ -743,6 +761,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.PreviewSettingsAvatarShapeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviewSettingsAvatarShapeComboBox.BackColor = System.Drawing.SystemColors.Window;
             this.PreviewSettingsAvatarShapeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PreviewSettingsAvatarShapeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PreviewSettingsAvatarShapeComboBox.FormattingEnabled = true;
@@ -765,6 +784,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.PreviewSettingsDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviewSettingsDescriptionTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.PreviewSettingsDescriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreviewSettingsDescriptionTextBox.Location = new System.Drawing.Point(223, 34);
             this.PreviewSettingsDescriptionTextBox.Name = "PreviewSettingsDescriptionTextBox";
@@ -785,6 +805,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             // 
             this.PreviewSettingsTitleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviewSettingsTitleTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.PreviewSettingsTitleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreviewSettingsTitleTextBox.Location = new System.Drawing.Point(223, 7);
             this.PreviewSettingsTitleTextBox.Name = "PreviewSettingsTitleTextBox";
@@ -801,21 +822,11 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.PreviewSettingsTitleLabel.TabIndex = 0;
             this.PreviewSettingsTitleLabel.Text = "Title";
             // 
-            // PayRespectToMyWorkCheckBox
-            // 
-            this.PayRespectToMyWorkCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PayRespectToMyWorkCheckBox.Location = new System.Drawing.Point(9, 416);
-            this.PayRespectToMyWorkCheckBox.Name = "PayRespectToMyWorkCheckBox";
-            this.PayRespectToMyWorkCheckBox.Size = new System.Drawing.Size(959, 24);
-            this.PayRespectToMyWorkCheckBox.TabIndex = 24;
-            this.PayRespectToMyWorkCheckBox.Text = "Pay respect to my hard work";
-            this.PayRespectToMyWorkCheckBox.UseVisualStyleBackColor = true;
-            this.PayRespectToMyWorkCheckBox.CheckedChanged += new System.EventHandler(this.PayRespectToMyWorkCheckBox_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1007, 525);
             this.Controls.Add(this.StatusStrip1);
@@ -824,6 +835,7 @@ namespace TumblrMaterialThemeQuotesGenerator
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip1;
             this.Name = "Form1";
+            this.RightToLeftLayout = true;
             this.Text = "Generate Quotes Code for Material Design on Tumblr";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.MenuStrip1.ResumeLayout(false);

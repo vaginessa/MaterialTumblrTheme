@@ -13,6 +13,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
+/*
+    Powered by: 
+
+       .o                                .o88       .o88
+      .88                                "888       "888
+    o8888oo  ooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b
+    ""888""  888  "888  "888P"Y88bP"Y88b  d88' `88b  888  "888""8P
+      888    888   888   888   888   888  888   888  888   888
+      888 .  888   888   888   888   888  888.  888  888   888    .o.
+      "888Y  `V88V"V8P' o888o o888o o888o 88`bod8P' o888o d888b   Y8P
+
+ */
+
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -506,7 +519,7 @@ namespace TumblrMaterialThemeQuotesGenerator
 
             for (int i = 0; i < QuotesList.Items.Count; i++)
             {
-                text += "\"\\\"" + QuotesList.Items[i].SubItems[0].Text.Replace("\"", "\\\"").Replace(System.Environment.NewLine, "<br/>") + "\\\" - " + QuotesList.Items[i].SubItems[1].Text.Replace("\"", "\\\"") + ", " + QuotesList.Items[i].SubItems[2].Text.Replace("\"", "\\\"") + "\"";
+                text += "\"\\\"" + QuotesList.Items[i].SubItems[0].Text.Replace("\"", "\\\"").Replace("\n", System.Environment.NewLine).Replace(System.Environment.NewLine, "<br/>") + "\\\" - " + QuotesList.Items[i].SubItems[1].Text.Replace("\"", "\\\"") + ", " + QuotesList.Items[i].SubItems[2].Text.Replace("\"", "\\\"") + "\"";
                 if (i != QuotesList.Items.Count - 1)
                 {
                     text += ",";
